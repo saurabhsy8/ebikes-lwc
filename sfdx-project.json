@@ -6,5 +6,6 @@
         }
     ],
     "namespace": "",
-    "sourceApiVersion": "54.0"
+    "sourceApiVersion": "54.0",
+    "sfdcLoginUrl": "https://cunning-hawk-77trwl-dev-ed.my.salesforce.com"
 }

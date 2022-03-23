@@ -1,0 +1,16 @@
+version: v2
+    
+tasks:    
+  deploy:
+    runner:
+      containers:
+      - image: salesforce/salesforcedx:latest-rc-slim
+    steps:
+      - checkout
+      - commands:
+        - |
+            # first login 
+            ls
+            sfdx auth:jwt:grant -i ${CLIENT_ID} -f ./server.key -d -s -u ${USERNAME} -r ${INSTANCE_URL}
+            # deploy
+
