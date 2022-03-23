@@ -9,8 +9,8 @@ tasks:
       - checkout
       - commands:
         - |
-            # first login 
-            ls
+            # login 
             sfdx auth:jwt:grant -i ${CLIENT_ID} -f ./server.key -d -s -u ${USERNAME} -r ${INSTANCE_URL}
             # deploy
+            sfdx force:source:push -u ${ORG_USERNAME}
 
