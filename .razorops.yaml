@@ -16,8 +16,10 @@ tasks:
             # delete the existing org
             # sfdx force:org:delete -p -u ebikes > out.log 2> /dev/null
 
+            echo ${ORG_USERNAME}
+
             # create new org
-            sfdx force:org:create -s -f config/project-scratch-def.json -a ebikes
+            sfdx force:org:create -s -f config/project-scratch-def.json -a ${ORG_USERNAME}
 
             # deploy
             sfdx force:source:push -u ${ORG_USERNAME}
