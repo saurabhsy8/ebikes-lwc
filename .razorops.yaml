@@ -14,7 +14,7 @@ tasks:
             sfdx auth:jwt:grant -i ${CLIENT_ID} -f ./server.key -u ${USERNAME} -r ${INSTANCE_URL} -a ${ORG_NAME} -d -s
 
             # delete the existing org
-            sfdx force:org:delete -p -u ebikes > /dev/null
+            sfdx force:org:delete -p -u ebikes > out.log 2> /dev/null
 
             # create new org
             sfdx force:org:create -s -f config/project-scratch-def.json -a ebikes
